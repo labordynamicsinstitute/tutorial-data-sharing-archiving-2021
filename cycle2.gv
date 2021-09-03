@@ -1,12 +1,9 @@
-digraph cycle2 {
+digraph cycle1 {
 
-  compound=false;
-  root=plan;
-  
   # a 'graph' statement
   graph [overlap = false, fontsize = 10, 
-         layout = twopi, colorscheme = svg,
-         size="9,15!"]
+         layout = circo, colorscheme = svg,
+         size="9,15!" ]
 
   node [shape = circle,
         fixedsize = true,
@@ -38,32 +35,11 @@ digraph cycle2 {
   
   node [style=invis]
   invis1
-  invis2
-  invis3
-  invis4
-  invis5
-  invis6
-  invis7
 
   # several 'edge' statements
-  subgraph trad {
   edge [color = grey]
-  plan [ pos = "0,0!"]
   plan -> collect -> process -> analyze 
-  analyze -> invis1 -> invis2 -> invis3 [style=invis]
-  invis3 -> plan [style=invis] 
-  }
-  subgraph new {
-    edge [ color = red ]
-    invis7 [ pos = "0,0!"]
-    invis7 -> invis6 -> invis5 -> invis4 -> preserve [style=invis]
-    preserve -> share -> reuse
-    reuse -> invis7 [style=invis]
-    
-    
-  }
-  
-  collect -> preserve [color = red]
-  analyze -> preserve [color = red]
-  
+  analyze -> invis1 -> share [style=invis]
+  share -> reuse
+  reuse -> plan [style=invis]
 }
