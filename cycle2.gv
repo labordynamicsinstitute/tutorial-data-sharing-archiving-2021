@@ -1,0 +1,69 @@
+digraph cycle2 {
+
+  compound=false;
+  root=plan;
+  
+  # a 'graph' statement
+  graph [overlap = false, fontsize = 10, 
+         layout = twopi, colorscheme = svg,
+         size="9,15!"]
+
+  node [shape = circle,
+        fixedsize = true,
+        style= filled,
+        width = 0.9] // sets as circles
+        
+  edge [penwidth = 5]
+
+  node [fillcolor = firebrick, label="Plan", pos = "0,0!"]
+  plan
+
+  node [fillcolor = orange, label="Collect"]
+  collect 
+
+  node [fillcolor = mediumseagreen, label="Process"]
+  process
+  
+  node [fillcolor = goldenrod, label="Analyze"]
+  analyze
+  
+  node [fillcolor = mediumpurple, label="Preserve"]
+  preserve
+  
+  node [fillcolor = lightskyblue, label="Share"]
+  share
+  
+  node [fillcolor = dodgerblue, label="Reuse"]
+  reuse
+  
+  node [style=invis]
+  invis1
+  invis2
+  invis3
+  invis4
+  invis5
+  invis6
+  invis7
+
+  # several 'edge' statements
+  subgraph trad {
+  edge [color = grey]
+  plan [ pos = "0,0!"]
+  plan -> collect -> process -> analyze 
+  analyze -> invis1 -> invis2 -> invis3 [style=invis]
+  invis3 -> plan [style=invis] 
+  }
+  subgraph new {
+    edge [ color = red ]
+    invis7 [ pos = "0,0!"]
+    invis7 -> invis6 -> invis5 -> invis4 -> preserve [style=invis]
+    preserve -> share -> reuse
+    reuse -> invis7 [style=invis]
+    
+    
+  }
+  
+  collect -> preserve [color = red]
+  analyze -> preserve [color = red]
+  
+}
