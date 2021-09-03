@@ -40,12 +40,9 @@ Background
 Goals of this tutorial
 ==================
 
-- Goal 1: Be able to curate the data and code necessary for reproducible analysis
+- Goal 1: Be able to curate the data necessary for reproducible analysis
 - Goal 2: Know when to do so
 - Goal 3: Choose license (while respecting ethics)
-
-
-
 
 
 
@@ -120,11 +117,12 @@ FAIR Data Principles
 - **I**nteroperable
 - **R**e-Usable
 
+
+> Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
+
 ***
 
 ![FAIR Data Principles](images/Screenshot_2019-09-30_The_FAIR_Data_Principles.png)
-
-> Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
 
 
 
@@ -527,6 +525,33 @@ In one of my day jobs:
 ![openicpsr](images/openicpsr-main-page.png)
 
 
+
+Getting started on Zenodo
+=========================
+type: prompt
+incremental: false
+
+We will NOT use the regular Zenodo; rather, we will test in the Sandbox. 
+
+
+**https://sandbox.zenodo.org/**
+
+
+Check your URL bar! There's no other indication that this is not the real Zenodo!
+
+***
+
+## Tutorial:
+
+https://library.cfa.harvard.edu/data-archiving-and-sharing (Harvard Center for Astrophysics)
+
+
+## Source data:
+
+- [PDF of Survey Instrument](https://github.com/larsvilhuber/tutorial-data-sharing-archiving-2021/blob/eb64c15ab470ff6848a565a9f88f2896d410dc62/data/survey-print-version-20210902.pdf)
+- [Sample data](https://github.com/larsvilhuber/tutorial-data-sharing-archiving-2021/blob/eb64c15ab470ff6848a565a9f88f2896d410dc62/data/browser-survey.xlsx)
+- [Google Sheet with updated Survey data](https://docs.google.com/spreadsheets/d/141okmmX_P8bLvZ_K1uA-yBicKqS9rBm8DgUXi2Sa6f0/edit?usp=sharing)
+
 Survey: Phase 1
 ======
 
@@ -563,6 +588,16 @@ Since I have already defined the survey, and created some test data, I can ... p
 - I could publish it so that I can show I'm serious to my survey respondents!
 
 
+
+Do it now
+==========
+type: section
+
+<div style="text-align: center;">
+<img src="images/giphy_scan.gif" width="50%" alt="scan" />
+</div>
+
+
 Survey: Phase 1
 ======
 
@@ -580,8 +615,6 @@ Survey: Phase 1
 Survey: Phase 1
 ==============
 
-Survey: Phase 1
-======
 
 ![node1](cycle3-node123.png)
 
