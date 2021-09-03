@@ -971,9 +971,9 @@ zenodo.api = &quot;https://sandbox.zenodo.org/api/records/&quot;
 }
 </code></pre>
 
-<pre><code>[1] &quot;https://sandbox.zenodo.org/api/files/144c207a-2b78-4f1c-95fd-f517c52bbd4a/browser-survey.xlsx&quot;
+<pre><code>[1] &quot;https://sandbox.zenodo.org/api/files/69a81ad5-99da-4cbb-97bd-8111d02225f2/browser-survey.xlsx&quot;
 [1] &quot;Downloading...&quot;
-[1] &quot;https://sandbox.zenodo.org/api/files/144c207a-2b78-4f1c-95fd-f517c52bbd4a/survey-print-version-20210902.pdf&quot;
+[1] &quot;https://sandbox.zenodo.org/api/files/69a81ad5-99da-4cbb-97bd-8111d02225f2/survey-print-version-20210902.pdf&quot;
 [1] &quot;Skipping.&quot;
 </code></pre>
 
@@ -995,7 +995,7 @@ latest.doi &lt;- latest$doi
 latest.doi
 </code></pre>
 
-<pre><code>[1] &quot;10.5072/zenodo.910136&quot;
+<pre><code>[1] &quot;10.5072/zenodo.910669&quot;
 </code></pre>
 
 </div>
@@ -1006,7 +1006,7 @@ latest.doi
 <div class="slideContent" >
 <pre><code class="r">browser_survey %&gt;% 
   group_by(`What browser do you use?`) %&gt;%
-  summarize(`How many browser tabs do you have open?`) -&gt; table
+  summarize(Tabs = mean(`How many browser tabs do you have open?`)) -&gt; table
 </code></pre>
 
 </div>
@@ -1024,17 +1024,17 @@ latest.doi
 <table><thead>
 <tr>
 <th align="left">What browser do you use?</th>
-<th align="right">How many browser tabs do you have open?</th>
+<th align="right">Tabs</th>
 </tr>
 </thead><tbody>
 <tr>
 <td align="left">Firefox</td>
-<td align="right">51</td>
+<td align="right">24.33333</td>
 </tr>
 </tbody></table>
 
-<p>Source: <a href="https://doi.org/10.5072/zenodo.910136">https://doi.org/10.5072/zenodo.910136</a>,<br/>
- created 2021-09-03T02:31:18.159644+00:00.
+<p>Source: <a href="https://doi.org/10.5072/zenodo.910669">https://doi.org/10.5072/zenodo.910669</a>,<br/>
+ created 2021-09-03T14:38:13.328244+00:00.
 </center></p>
 
 </div>

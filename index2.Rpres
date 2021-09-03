@@ -199,7 +199,7 @@ Crosstab
 ```{r}
 browser_survey %>% 
   group_by(`What browser do you use?`) %>%
-  summarize(`How many browser tabs do you have open?`) -> table
+  summarize(Tabs = mean(`How many browser tabs do you have open?`)) -> table
 
 ```
 
