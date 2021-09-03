@@ -17,25 +17,39 @@ pkgTest <- function(x)
   return("OK")
 }
 
-pkgTest.github <- function(x,source=NA)
+pkgTest.github <- function(x,package=NA)
 {
-  if (!require(x,character.only = TRUE))
+  if ( is.na(package) ) { package = strsplit(x,"/",fixed=TRUE)[[1]][2] } 
+  if (!require(package,character.only = TRUE))
   {
-    if ( is.na(source) ) { src = x } else { src = paste(source,x,sep="/") }
-    install_github(src)
-    if(!require(x,character.only = TRUE)) stop(paste("Package ",x,"not found"))
+    install_github(x)
+    if(!require(package,character.only = TRUE)) stop(paste("Package ",package,"not found"))
   }
   return("OK")
 }
 
 # "data.table",
-global.libraries <- c("dplyr","devtools","rprojroot","rcrossref","tidyr",
-                      "readxl","stringr","remotes","knitr","readr",
-                      "purrr","xlsx","jsonlite","lubridate",
-                       "ggplot2","haven","janitor","tictoc")
-github.libraries <- c("iqss/dataverse-client-r")
+global.libraries <- c("dplyr","rmarkdown","ggplot2","ggthemes","knitr","devtools","diagram","DiagrammeR","DiagrammeRsvg","rjson", "tidyr","here")
+github.libraries <- c("iqss/dataverse-client-r","hadley/emo")
 
 results <- sapply(as.list(global.libraries), pkgTest)
 
 #results <- sapply(as.list(github.libraries),pkgTest.github)
-install_github(github.libraries)
+pkgTest.github("iqss/dataverse-client-r",package="dataverse")
+pkgTest.github("hadley/emo")
+
+# A utility function
+png_digraph <- function(filename, code){
+  capture.output({
+    system(paste("dot -Tpng",code,"-Gdpi=100","-o",filename,sep=" "))
+  },  file='NUL')
+  knitr::include_graphics(filename)
+}
+
+
+# locations
+
+basepath <- here::here()
+dataloc <- file.path(basepath,"data")
+workpath <- tempdir()
+
