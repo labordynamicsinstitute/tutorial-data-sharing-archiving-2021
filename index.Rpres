@@ -367,6 +367,8 @@ To be Interoperable:
 - I2. **(meta)data use vocabularies that follow FAIR principles.**
 - I3. (meta)data include qualified references to other (meta)data.
 
+***
+
 To be Re-usable:
 
 - R1. meta(data) have a plurality of accurate and relevant attributes.
