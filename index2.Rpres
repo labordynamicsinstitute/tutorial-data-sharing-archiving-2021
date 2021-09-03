@@ -198,8 +198,9 @@ Crosstab
 
 ```{r}
 browser_survey %>% 
+  mutate(num_tabs = as.numeric(`How many browser tabs do you have open?`)) %>%
   group_by(`What browser do you use?`) %>%
-  summarize(Tabs = mean(`How many browser tabs do you have open?`)) -> table
+  summarize(`Mean number of tabs` = mean(num_tabs,na.rm=TRUE)) -> table
 
 ```
 
@@ -213,6 +214,8 @@ type: prompt
 
 ![node345](cycle3-node345.png)
 
+***
+
 <center>
 ```{r, echo=FALSE}
 table %>% 
@@ -221,6 +224,8 @@ table %>%
 
  Source: `r paste0("https://doi.org/",latest$doi)`,<br/>
  created `r latest$created`.
+ 
+ Note: DOI is fake. 
 </center>
 
 Lessons learned

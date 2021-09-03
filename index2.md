@@ -171,9 +171,9 @@ for ( value in file.list$value ) {
 ```
 
 ```
-[1] "https://sandbox.zenodo.org/api/files/69a81ad5-99da-4cbb-97bd-8111d02225f2/browser-survey.xlsx"
+[1] "https://sandbox.zenodo.org/api/files/b31d6ec7-fb8a-43a0-9bcd-a6e3fadedc65/browser-survey.xlsx"
 [1] "Downloading..."
-[1] "https://sandbox.zenodo.org/api/files/69a81ad5-99da-4cbb-97bd-8111d02225f2/survey-print-version-20210902.pdf"
+[1] "https://sandbox.zenodo.org/api/files/b31d6ec7-fb8a-43a0-9bcd-a6e3fadedc65/survey-print-version-20210902.pdf"
 [1] "Skipping."
 ```
 
@@ -198,7 +198,7 @@ latest.doi
 ```
 
 ```
-[1] "10.5072/zenodo.910669"
+[1] "10.5072/zenodo.910834"
 ```
 
 Crosstab
@@ -207,8 +207,9 @@ Crosstab
 
 ```r
 browser_survey %>% 
+  mutate(num_tabs = as.numeric(`How many browser tabs do you have open?`)) %>%
   group_by(`What browser do you use?`) %>%
-  summarize(Tabs = mean(`How many browser tabs do you have open?`)) -> table
+  summarize(`Mean number of tabs` = mean(num_tabs,na.rm=TRUE)) -> table
 ```
 
 
@@ -221,16 +222,23 @@ type: prompt
 
 ![node345](cycle3-node345.png)
 
+***
+
 <center>
 
 Table: Browser tabs by browser type.
 
-|What browser do you use? |     Tabs|
-|:------------------------|--------:|
-|Firefox                  | 24.33333|
+|What browser do you use? | Mean number of tabs|
+|:------------------------|-------------------:|
+|Chrome                   |              16.000|
+|Edge                     |               2.000|
+|Firefox                  |              21.875|
+|Safari                   |              16.250|
 
- Source: https://doi.org/10.5072/zenodo.910669,<br/>
- created 2021-09-03T14:38:13.328244+00:00.
+ Source: https://doi.org/10.5072/zenodo.910834,<br/>
+ created 2021-09-03T17:19:46.872665+00:00.
+ 
+ Note: DOI is fake. 
 </center>
 
 Lessons learned
