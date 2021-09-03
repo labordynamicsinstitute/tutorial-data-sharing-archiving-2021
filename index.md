@@ -566,7 +566,8 @@ Survey: Phase 1
 
 Let's go to Zenodo:
 
-> [https://sandbox.zenodo.org/deposit/910136](https://sandbox.zenodo.org/deposit/910136) (only works for presenter)
+> - Presenter: [https://sandbox.zenodo.org/deposit/910136](https://sandbox.zenodo.org/deposit/910136)
+> - Viewers: [https://sandbox.zenodo.org/](https://sandbox.zenodo.org/)
 
 
 Survey: Phase 1
@@ -635,9 +636,8 @@ type: section
 
 > Goal: Robustness and automation - getting close to push-button reproducibility
 
-(Advanced features of Git(hub,lab) allows us to implement and test that)
+- (Advanced features of Git(hub,lab) allows us to implement and test that)
 
-***
 > Goal: Correctly document reproducible research
 
 - (also respond to thesis advisor, referree, editor, curious journalist asking the question "what has changed") 
