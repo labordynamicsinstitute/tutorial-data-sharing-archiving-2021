@@ -2,6 +2,7 @@
 PWD=$(pwd)
 repo=${PWD##*/}
 space=larsvilhuber
+version=latest
 
 os=$(uname)
 
@@ -9,14 +10,24 @@ os=$(uname)
 
 # build the docker if necessary
 
-DOCKER_BUILDKIT=1 docker build . -t $space/$repo
+docker pull $space/$repo:$version
+
+# if not there, build it
+
+[[ $? == 0 ]] || DOCKER_BUILDKIT=1 docker build . -t $space/$repo
 
 case $os in
             Linux)
-                sleep 10 && xdg-open http://localhost:8787 &
+                if [[ ! -z $(which xdg-open) ]]
+                then
+                  sleep 10 && xdg-open http://localhost:8787 &
+                fi
                 ;;
             Darwin)
-                sleep 10 && open http://localhost:8787 &
+                if [[ -z $(which open) ]]
+                then
+                   sleep 10 && open http://localhost:8787 &
+                fi
                 ;;
 
 esac
