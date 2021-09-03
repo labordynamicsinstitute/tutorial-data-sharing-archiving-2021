@@ -29,7 +29,7 @@ pkgTest.github <- function(x,package=NA)
 }
 
 # "data.table",
-global.libraries <- c("dplyr","rmarkdown","ggplot2","ggthemes","knitr","devtools","diagram","DiagrammeR","DiagrammeRsvg","rjson", "tidyr","here")
+global.libraries <- c("dplyr","rmarkdown","ggplot2","ggthemes","knitr","devtools","diagram","DiagrammeR","DiagrammeRsvg","rjson", "tidyr","here","readxl")
 github.libraries <- c("iqss/dataverse-client-r","hadley/emo")
 
 results <- sapply(as.list(global.libraries), pkgTest)
