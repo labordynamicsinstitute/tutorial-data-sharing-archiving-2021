@@ -1,7 +1,7 @@
-Data Sharing and Archiving for Reproducibility (RT2 2021)
+Data Sharing and Archiving for Reproducibility (Cornell 2024)
 ========================================================
 author: Lars Vilhuber
-date: 2021-09-03
+date: 2024-11-13
 autosize: true
 width: 1200
 
@@ -23,9 +23,8 @@ We need Data!
 =============
 
 <center>
-Go to [https://forms.gle/d74XsGWkCTKsPHKC7](https://forms.gle/d74XsGWkCTKsPHKC7) to fill out!
+Go to [https://forms.gle/FEpF9RVq56XmesWF9](https://forms.gle/FEpF9RVq56XmesWF9) to fill out!
 
-![QR](images/qr-survey.png)
 </center>
 
 Background 
@@ -433,7 +432,8 @@ type: section
 <center>
 How many browser tabs do you have open?
 
-![qr](images/qr-survey.png)
+<https://forms.gle/FEpF9RVq56XmesWF9>
+
 </center>
 
 Survey
@@ -550,9 +550,10 @@ https://library.cfa.harvard.edu/data-archiving-and-sharing (Harvard Center for A
 
 ## Source data:
 
+- [Survey](https://forms.gle/FEpF9RVq56XmesWF9)
 - [PDF of Survey Instrument](https://github.com/larsvilhuber/tutorial-data-sharing-archiving-2021/blob/eb64c15ab470ff6848a565a9f88f2896d410dc62/data/survey-print-version-20210902.pdf)
 - [Sample data](https://github.com/larsvilhuber/tutorial-data-sharing-archiving-2021/blob/eb64c15ab470ff6848a565a9f88f2896d410dc62/data/browser-survey.xlsx)
-- [Google Sheet with updated Survey data](https://docs.google.com/spreadsheets/d/141okmmX_P8bLvZ_K1uA-yBicKqS9rBm8DgUXi2Sa6f0/edit?usp=sharing)
+- [Google Sheet with updated Survey data](https://docs.google.com/spreadsheets/d/1kd0_eFtbGb7SLPSV6ls_OwS3FQFN7hRgb4Q97fwQZkQ/edit?usp=sharing)
 
 Survey: Phase 1
 ======
